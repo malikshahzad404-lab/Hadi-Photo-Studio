@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
 <title>Hadi Photo Studio | Wedding Photography & Videography</title>
 <meta name="description" content="Hadi Photo Studio - Premium wedding photography, videography and event booking.">
 <style>
@@ -121,7 +125,7 @@ footer{background:#111;color:#bbb;padding:30px 0;text-align:center}.footer-gold{
     <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     <nav>
       <a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a>
-      <a href="#booking">Booking</a><a href="#videos">Videos</a><a href="#contact">Contact</a>
+      <a href="#booking">Booking</a><a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -205,18 +209,6 @@ footer{background:#111;color:#bbb;padding:30px 0;text-align:center}.footer-gold{
     </div>
   </div>
   <div id="bookingSummary"></div>
-</div>
-</section>
-
-<section id="videos" class="dark-section">
-<div class="container">
-  <div class="section-head"><div class="kicker">Watch</div><h2>YouTube Videos</h2><p>Add your YouTube video link by replacing the iframe URL in this page.</p></div>
-  <div class="video-box"><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Hadi Photo Studio YouTube" allowfullscreen></iframe></div>
-  <div class="socials">
-    <a class="btn btn-outline" href="#" target="_blank">Facebook</a>
-    <a class="btn btn-outline" href="#" target="_blank">YouTube</a>
-    <a class="btn btn-outline" href="#" target="_blank">LinkedIn</a>
-  </div>
 </div>
 </section>
 
@@ -323,6 +315,11 @@ function sendWhatsApp(){window.open('https://wa.me/923058304908?text='+whatsappT
 function clearForm(){if(!confirm('Clear the complete booking form?'))return;document.querySelectorAll('input:not([readonly]), textarea').forEach(x=>{if(x.type==='number')x.value=0;else x.value=''});document.querySelectorAll('select').forEach(x=>x.selectedIndex=0);document.getElementById('bookingSummary').innerHTML='';document.getElementById('bookingSummary').style.display='none';calculateAll();}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
 makeEvents();calculateAll();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
 </script>
 </body>
 </html>
