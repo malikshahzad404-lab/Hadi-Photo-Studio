@@ -320,6 +320,92 @@ makeEvents();calculateAll();
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
 }
+  Mere "Hadi Photo Studio" website ke "Professional Services" section mein 2 naye cards add karo.
+
+1.  Card 1: Title = "SSD 128GB", Price = "15,000 PKR", Description = "1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000". Icon camera wala rakho.
+2.  Card 2: Title = "Indian Album", Price = "12,000 PKR", Description = "1 Album = 12,000 | 2 Album = 24,000". Icon album wala rakho.
+
+Baqi cards as it is rehne do. Design same rakho. 
+Aur "Book Your Event" button par click karne se hi "Event Booking Form" khule. Home page par form direct na dikhe.
 </script>
 </body>
 </html>
+Website ko Single Page App banao. 
+Home par sirf Logo, Banner aur Gallery dikhe. 
+"Services" aur "Booking Form" chupe rahen. 
+Jab menu se "Services" click ho to sirf services dikhen. 
+Jab "Booking" click ho to sirf form dikhe.
+Booking Form mein har service ke liye "Quantity" ka option add karo. 
+Jaise user 2 select kare to price * 2 ho jaye. 
+SSD aur Indian Album ko bhi is list mein add karo with above prices.
+Subtotal, Grand Total auto calculate ho.
+Bhai, meri "Hadi Photo Studio" ki website ko update karo. Ye rahi meri requirements:
+
+1.  SERVICES SECTION UPDATE:
+    "Professional Services" mein ye 2 naye cards add karo:
+    Card 1: 
+    - Title: SSD 128GB
+    - Price: 15,000 PKR
+    - Description: 1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000
+    - Icon: Hard disk wala
+    
+    Card 2: 
+    - Title: Indian Album
+    - Price: 12,000 PKR  
+    - Description: 1 Album = 12,000 | 2 Album = 24,000
+    - Icon: Album wala
+
+2.  BOOKING FORM UPDATE:
+    "Event Booking Form" mein bhi ye 2 services add karo with quantity option.
+    Har service ke liye "Quantity" ka dropdown 1,2,3,4,5 ho.
+    Price auto calculate ho: Quantity * Price
+    Subtotal, Discount, Grand Total, Advance Payment, Remaining Balance sab auto calculate hon.
+
+3.  PAGE NAVIGATION FIX:
+    Website ko single page banao.
+    Home page par sirf Banner + Gallery dikhe.
+    "Services" aur "Booking Form" tab par click karne se hi show hon.
+    Direct home par booking form na dikhe.
+
+4.  BUTTONS:
+    "Generate Booking", "Print Booking", "Download PDF", "Send Booking on WhatsApp" button kaam karne chahiye.
+    PDF download client ke liye bhi ON rakhna.
+
+Mujhe updated mukammal HTML, CSS, JS code de do. Design black and golden theme ka hi rakhna.
+Update my "HADI PHOTO STUDIO" website and app with these changes:
+
+1.  SERVICES & PRICING UPDATE:
+    In "Professional Services" section, add/update these cards with exact prices:
+    - Wedding Photography: 15,000 PKR per day
+    - Wedding Videography: 15,000 PKR per day  
+    - Birthday Video: 15,000 PKR per day
+    - Birthday Pictures: 10,000 PKR per day
+    - Female Photographer: 10,000 PKR per day
+    - Drone Coverage: 10,000 PKR per day
+    - SSD 128GB: 15,000 PKR each. Note: 1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000
+    - Indian Album: 12,000 PKR each. Note: 1 Album = 12,000 | 2 Album = 24,000
+    - Bridal Shower: 15,000 PKR per day
+    - Outdoor Coverage: 15,000 PKR per day
+    
+    Use camera, video, album, drone icons. Keep design black and golden theme.
+
+2.  BOOKING FORM & CALCULATION:
+    In "Event Booking Form", add all above services with "Quantity" dropdown 1-5.
+    Price should auto-calculate: Quantity x Price per day.
+    Show Subtotal, Discount, Grand Total, Advance Payment, Remaining Balance. All should update live.
+
+3.  PAGE NAVIGATION:
+    Make it a single page website.
+    On Home: Only show Banner + Featured Gallery.
+    "Services" and "Booking" should only show when clicked from top menu.
+    Do not show Booking Form directly on home page.
+
+4.  IMPORTANT FEATURES:
+    - Enable "Download PDF" and "Print" for Client accounts also, not just Admin.
+    - "Generate Booking", "Print Booking", "Download PDF", "Send Booking on WhatsApp" buttons must work.
+    - Keep "Right Click and Screenshot Block" on Generate Invoice page.
+    - Use this logo: HADI PHOTO STUDIO - WEDDING PHOTOGRAPHY & VIDEOGRAPHY. Dark blue background, golden text.
+    - Splash screen 2 seconds with studio name and contact: 0305 8304908 / 0312 8304908
+    - No watermark.
+
+Give me complete updated HTML, CSS, JS code. Also generate APK with WebView.
