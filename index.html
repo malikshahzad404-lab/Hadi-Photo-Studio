@@ -4,34 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111111">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="manifest" href="manifest.json">
-<title>Hadi Photo Studio | Wedding Photography & Videography</title>
-<meta name="description" content="Hadi Photo Studio - Premium wedding photography, videography and event booking.">
+<meta name="author" content="Hadi Photo Studio">
+<meta name="keywords" content="wedding photographer, hadi photo studio, photography pakistan, videography">
+<meta name="description" content="Hadi Photo Studio offers Professional Wedding Photography, Videography, Birthday Events in Pakistan. Book now: 0305-8304908">
+<title>Hadi Photo Studio - Wedding Photography & Videography in Pakistan</title>
 <style>
-:root{
-  --gold:#c9a227; --gold2:#e5c45a; --black:#111; --ink:#202020; --muted:#666;
-  --white:#fff; --light:#f7f7f5; --line:#e5e1d5; --shadow:0 15px 45px rgba(0,0,0,.10);
-}
+:root{--gold:#c9a227;--gold2:#e5c45a;--black:#111;--ink:#202020;--muted:#666;--white:#fff;--light:#f7f7f5;--line:#e5e1d5;--shadow:0 15px 45px rgba(0,0,0,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
-a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
 .container{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.96);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(201,162,39,.35)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.97);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(201,162,39,.35)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
 .logo-mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-weight:900}
 .logo span{color:var(--gold)}
 nav{display:flex;gap:22px;align-items:center}
-nav a{font-size:14px;color:#eee;transition:.25s}
-nav a:hover{color:var(--gold)}
+nav a{font-size:14px;color:#eee;transition:.25s;cursor:pointer}
+nav a:hover,nav a.active{color:var(--gold)}
 .menu{display:none;background:none;border:1px solid #555;color:#fff;padding:8px 11px;border-radius:8px}
-.hero{min-height:78vh;display:grid;place-items:center;text-align:center;color:#fff;background:
-linear-gradient(rgba(0,0,0,.67),rgba(0,0,0,.70)),
-url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover fixed}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,.67),rgba(0,0,0,.70)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover fixed}
 .hero-inner{padding:90px 0}
 .badge{display:inline-block;border:1px solid var(--gold);color:var(--gold2);padding:7px 14px;border-radius:30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 h1{font-size:clamp(42px,7vw,78px);line-height:1.02;margin-bottom:20px}
@@ -40,372 +33,248 @@ h1 span,.gold{color:var(--gold)}
 .btns{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .btn{border:0;border-radius:8px;padding:13px 19px;cursor:pointer;font-weight:700;transition:.25s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .btn:hover{transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:#111}
-.btn-dark{background:#111;color:#fff;border:1px solid #333}
-.btn-outline{background:transparent;color:#fff;border:1px solid var(--gold)}
-section{padding:80px 0}
-.section-head{text-align:center;margin-bottom:38px}
-.kicker{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}
-h2{font-size:clamp(30px,4vw,44px);margin:7px 0 10px}
-.section-head p{color:var(--muted);max-width:700px;margin:auto}
+.btn-gold{background:var(--gold);color:#111}.btn-dark{background:#111;color:#fff;border:1px solid #333}.btn-outline{background:transparent;color:#fff;border:1px solid var(--gold)}
+section{padding:80px 0}.section-head{text-align:center;margin-bottom:38px}.kicker{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h2{font-size:clamp(30px,4vw,44px);margin:7px 0 10px}.section-head p{color:var(--muted);max-width:700px;margin:auto}
+.page{display:none}.page.active{display:block}
+#home.page.active{display:block}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow);transition:.3s}
 .card:hover{transform:translateY(-5px);border-color:var(--gold)}
-.icon{font-size:30px;margin-bottom:10px}.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.icon{font-size:30px;margin-bottom:10px}.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px;min-height:44px}
 .price{font-size:22px;font-weight:800;margin-top:15px}.price small{font-size:12px;color:#777}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery img{width:100%;height:250px;object-fit:cover;border-radius:12px;display:block;filter:saturate(.9);transition:.3s}
-.gallery img:hover{transform:scale(1.02);filter:saturate(1.1)}
-.dark-section{background:#111;color:#fff}.dark-section .section-head p{color:#bbb}
-.video-box{max-width:900px;margin:auto;aspect-ratio:16/9;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000}
-.video-box iframe{width:100%;height:100%;border:0}
-.socials{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery img{width:100%;height:250px;object-fit:cover;border-radius:12px;display:block;filter:saturate(.9);transition:.3s}
+.gallery img:hover{transform:scale(1.02);filter:saturate(1.1)}.dark-section{background:#111;color:#fff}.dark-section .section-head p{color:#bbb}
 .form-wrap{background:var(--light);padding:24px;border-radius:18px;border:1px solid var(--line)}
-.customer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
-.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #d7d4ca;border-radius:8px;background:#fff;outline:none}
-.field textarea{min-height:95px;resize:vertical}
-.full{grid-column:1/-1}
-.events{display:grid;gap:18px;margin-top:22px}
-.event-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.06)}
-.event-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;background:#111;color:#fff}
-.event-head h3{font-size:20px}.event-head .event-total{color:var(--gold2);font-weight:800}
-.event-body{padding:18px}
-.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.customer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #d7d4ca;border-radius:8px;background:#fff;outline:none}.field textarea{min-height:95px;resize:vertical}.full{grid-column:1/-1}
+.events{display:grid;gap:18px;margin-top:22px}.event-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.06)}
+.event-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;background:#111;color:#fff}.event-head h3{font-size:20px}.event-head .event-total{color:var(--gold2);font-weight:800}
+.event-body{padding:18px}.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.service-row{display:grid;grid-template-columns:1fr 120px 120px;gap:10px;align-items:end;padding:12px;border:1px solid #e5e1d5;border-radius:10px;background:#faf9f5}
+.service-row strong{display:block}.service-row small{color:#777}.service-price{text-align:right;font-weight:800}
 .event-subtotal{text-align:right;margin-top:15px;font-weight:800;font-size:18px}
-.summary{margin-top:22px;background:#111;color:#fff;border-radius:16px;padding:22px}
-.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:560px;margin-left:auto}
-.summary-row{display:flex;justify-content:space-between;border-bottom:1px solid #333;padding:9px 0}.summary-row.total{font-size:22px;color:var(--gold2);border-bottom:2px solid var(--gold)}
-.summary input{background:#fff;color:#111;border:0;border-radius:6px;padding:8px;width:170px;text-align:right}
-.action-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.notice{margin-top:12px;color:#777;font-size:12px}
-#bookingSummary{display:none;margin-top:30px}
-.invoice{background:#fff;border:1px solid #ddd;max-width:900px;margin:auto;padding:34px;color:#222}
-.invoice-top{display:flex;justify-content:space-between;gap:20px;border-bottom:3px solid var(--gold);padding-bottom:18px}
-.invoice-logo{font-size:28px;font-weight:900}.invoice-logo span{color:var(--gold)}
-.invoice-meta{text-align:right;font-size:13px}
-.invoice h3{margin:22px 0 10px}
-.invoice-customer{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;background:#faf9f5;padding:14px;border:1px solid #eee}
-.invoice table{width:100%;border-collapse:collapse;font-size:12px}
-.invoice th,.invoice td{border:1px solid #ddd;padding:8px;text-align:left}
-.invoice th{background:#f4f1e7}
+.summary{margin-top:22px;background:#111;color:#fff;border-radius:16px;padding:22px}.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:560px;margin-left:auto}
+.summary-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;padding:9px 0}.summary-row.total{font-size:22px;color:var(--gold2);border-bottom:2px solid var(--gold)}
+.summary input{background:#fff;color:#111;border:0;border-radius:6px;padding:8px;width:170px;text-align:right}.action-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.notice{margin-top:12px;color:#777;font-size:12px}
+#bookingSummary{display:none;margin-top:30px}.invoice{background:#fff;border:1px solid #ddd;max-width:1000px;margin:auto;padding:34px;color:#222}
+.invoice-top{display:flex;justify-content:space-between;gap:20px;border-bottom:3px solid var(--gold);padding-bottom:18px}.invoice-logo{font-size:28px;font-weight:900}.invoice-logo span{color:var(--gold)}
+.invoice-meta{text-align:right;font-size:13px}.invoice h3{margin:22px 0 10px}.invoice-customer{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;background:#faf9f5;padding:14px;border:1px solid #eee}
+.invoice table{width:100%;border-collapse:collapse;font-size:11px}.invoice th,.invoice td{border:1px solid #ddd;padding:7px;text-align:left}.invoice th{background:#f4f1e7}
 .payment-box{margin:18px 0 0 auto;max-width:350px}.payment-box div{display:flex;justify-content:space-between;padding:8px;border-bottom:1px solid #ddd}.payment-box .grand{font-weight:900;font-size:18px;background:#111;color:#fff}.payment-box .balance{font-weight:900;font-size:18px;color:#a27600}
 .invoice-footer{margin-top:25px;text-align:center;border-top:1px solid #ddd;padding-top:15px;font-size:12px;color:#666}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{padding:28px;border:1px solid var(--line);border-radius:15px}.contact-box p{margin:9px 0;color:#555}
-.map{width:100%;height:360px;border:0;border-radius:15px}
 footer{background:#111;color:#bbb;padding:30px 0;text-align:center}.footer-gold{color:var(--gold)}
 .float-wa{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:25px;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#111;color:#fff;border:1px solid var(--gold);padding:11px 16px;border-radius:8px;opacity:0;pointer-events:none;transition:.25s;z-index:100}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:900px){
-  .cards{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}
-  nav{display:none;position:absolute;top:72px;left:0;right:0;background:#111;padding:15px;flex-direction:column;align-items:flex-start}
-  nav.open{display:flex}.menu{display:block}
-  .event-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
-  section{padding:55px 0}.customer-grid,.contact-grid,.summary-grid,.invoice-customer{grid-template-columns:1fr}
-  .cards,.gallery{grid-template-columns:1fr}.event-grid{grid-template-columns:1fr}
-  .hero{min-height:72vh;background-attachment:scroll}.hero-inner{padding:65px 0}
-  .invoice{padding:18px}.invoice-top{flex-direction:column}.invoice-meta{text-align:left}
-  .invoice table{font-size:10px}.invoice th,.invoice td{padding:5px}
-}
-@media print{
-  body *{visibility:hidden!important}
-  #bookingSummary,#bookingSummary *{visibility:visible!important}
-  #bookingSummary{display:block!important;position:absolute;left:0;top:0;width:100%;margin:0}
-  .invoice{border:0;max-width:none;width:100%;box-shadow:none}
-  @page{size:A4;margin:10mm}
-}
+.splash{position:fixed;inset:0;background:#07101f;display:grid;place-items:center;z-index:9999;color:#fff;text-align:center;transition:opacity .4s}.splash.hide{opacity:0;pointer-events:none}.splash h2{color:var(--gold2);margin:0}.splash p{margin-top:8px;color:#ddd}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#111;padding:15px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.service-grid{grid-template-columns:1fr}}
+@media(max-width:600px){section{padding:55px 0}.customer-grid,.summary-grid,.invoice-customer{grid-template-columns:1fr}.cards,.gallery{grid-template-columns:1fr}.hero{min-height:72vh;background-attachment:scroll}.hero-inner{padding:65px 0}.invoice{padding:18px}.invoice-top{flex-direction:column}.invoice-meta{text-align:left}.invoice table{font-size:9px}.invoice th,.invoice td{padding:4px}.service-row{grid-template-columns:1fr 100px}.service-price{grid-column:1/-1;text-align:left}}
+@media print{body *{visibility:hidden!important}#bookingSummary,#bookingSummary *{visibility:visible!important}#bookingSummary{display:block!important;position:absolute;left:0;top:0;width:100%;margin:0}.invoice{border:0;max-width:none;width:100%;box-shadow:none}@page{size:A4;margin:10mm}}
 </style>
 </head>
 <body>
+<div class="splash" id="splash"><div><div class="logo-mark" style="margin:0 auto 15px">HP</div><h2>HADI PHOTO STUDIO</h2><p>WEDDING PHOTOGRAPHY & VIDEOGRAPHY</p><p>0305 8304908 / 0312 8304908</p></div></div>
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home"><div class="logo-mark">HP</div><div>Hadi <span>Photo Studio</span></div></a>
-    <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-    <nav>
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a>
-      <a href="#booking">Booking</a><a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a class="logo" href="#home" onclick="showPage('home');return false"><div class="logo-mark">HP</div><div>HADI <span>PHOTO STUDIO</span></div></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav>
+<a data-page="home" onclick="showPage('home')">Home</a>
+<a data-page="services" onclick="showPage('services')">Services</a>
+<a data-page="gallery" onclick="showPage('gallery')">Gallery</a>
+<a data-page="booking" onclick="showPage('booking')">Booking</a>
+<a data-page="contact" onclick="showPage('contact')">Contact</a>
+</nav>
+</div>
 </header>
 
-<main id="home">
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="badge">Premium Photography & Videography</div>
-    <h1>Hadi <span>Photo Studio</span></h1>
-    <p>We capture weddings, celebrations and unforgettable moments with professional photography, cinematic videography and modern event coverage.</p>
-    <div class="btns">
-      <a class="btn btn-gold" href="#booking">Book Your Event</a>
-      <a class="btn btn-outline" href="tel:0305830490">☎ Call Now</a>
-      <a class="btn btn-outline" href="https://wa.me/923058304908?text=Hello%20Hadi%20Photo%20Studio" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-</section>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div class="container hero-inner">
+<div class="badge">Premium Photography & Videography</div>
+<h1>HADI <span>PHOTO STUDIO</span></h1>
+<p>Professional wedding photography, cinematic videography and complete event coverage.</p>
+<div class="btns"><button class="btn btn-gold" onclick="showPage('booking')">Book Your Event</button><a class="btn btn-outline" href="tel:03058304908">☎ Call Now</a><a class="btn btn-outline" href="https://wa.me/923058304908?text=Hello%20Hadi%20Photo%20Studio" target="_blank">WhatsApp</a></div>
+</div></div>
+<div class="dark-section"><div class="container"><div class="section-head"><div class="kicker">Our Work</div><h2>Featured Gallery</h2><p>Professional wedding and event memories.</p></div><div class="gallery">
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Wedding">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Wedding event">
+<img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80" alt="Couple">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Wedding photography">
+<img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=80" alt="Bride">
+<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Event">
+</div></div></div>
 
-<section id="services">
+<div id="homeContact" style="padding:65px 0;background:#fff">
 <div class="container">
-  <div class="section-head"><div class="kicker">What We Do</div><h2>Professional Services</h2><p>Premium coverage for weddings, birthdays, outdoor shoots and special events.</p></div>
-  <div class="cards">
-    <div class="card"><div class="icon">📷</div><h3>Wedding Photography</h3><p>Professional picture coverage for your special day.</p><div class="price">10,000 PKR <small>/ day</small></div></div>
-    <div class="card"><div class="icon">🎥</div><h3>Wedding Videography</h3><p>Cinematic event video coverage with professional cameras.</p><div class="price">15,000 PKR <small>/ camera / day</small></div></div>
-    <div class="card"><div class="icon">🚁</div><h3>Drone Coverage</h3><p>Aerial views for grand entrances, venues and celebrations.</p><div class="price">10,000 PKR <small>/ day</small></div></div>
-    <div class="card"><div class="icon">👩‍🎤</div><h3>Female Photographer</h3><p>Professional female photography coverage when requested.</p><div class="price">10,000 PKR <small>/ day</small></div></div>
-    <div class="card"><div class="icon">🎂</div><h3>Birthday Video</h3><p>Beautiful video memories for birthdays and family events.</p><div class="price">10,000 PKR</div></div>
-    <div class="card"><div class="icon">📸</div><h3>Birthday Pictures</h3><p>High-quality birthday photography coverage.</p><div class="price">10,000 PKR</div></div>
-    <div class="card"><div class="icon">🌄</div><h3>Outdoor Video</h3><p>Creative outdoor video coverage for portraits and events.</p><div class="price">10,000 PKR <small>/ day</small></div></div>
-    <div class="card"><div class="icon">🌅</div><h3>Outdoor Pictures</h3><p>Professional outdoor photography sessions.</p><div class="price">10,000 PKR <small>/ day</small></div></div>
-  </div>
+<div class="section-head"><div class="kicker">Get In Touch</div><h2>Contact HADI PHOTO STUDIO</h2><p>Call or WhatsApp for bookings and event coverage.</p></div>
+<div style="max-width:700px;margin:auto;padding:28px;border:1px solid var(--line);border-radius:15px">
+<h3>Studio Information</h3>
+<p><strong>Owner:</strong> Malik Shahzad Mehmood</p>
+<p><strong>Mobile:</strong> <a class="gold" href="tel:03058304908">0305 8304908</a></p>
+<p><strong>WhatsApp:</strong> <a class="gold" href="https://wa.me/923058304908" target="_blank">0305 8304908</a></p>
+<div class="btns" style="justify-content:flex-start;margin-top:18px">
+<a class="btn btn-gold" href="tel:03058304908">☎ Call Now</a>
+<a class="btn btn-dark" href="https://wa.me/923058304908" target="_blank">WhatsApp</a>
+</div>
+</div>
+</div>
 </div>
 </section>
 
-<section id="gallery" class="dark-section">
-<div class="container">
-  <div class="section-head"><div class="kicker">Our Work</div><h2>Featured Gallery</h2><p>Replace these sample photos with your own Hadi Photo Studio images anytime.</p></div>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Wedding">
-    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Wedding event">
-    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80" alt="Couple">
-    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Wedding photography">
-    <img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=80" alt="Bride">
-    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Event">
-  </div>
+<section id="services" class="page"><div class="container">
+<div class="section-head"><div class="kicker">What We Do</div><h2>Professional Services</h2><p>Black & golden premium service pricing.</p></div>
+<div class="cards" id="serviceCards"></div>
+</div></section>
+
+<section id="gallery" class="page dark-section"><div class="container">
+<div class="section-head"><div class="kicker">Our Work</div><h2>Featured Gallery</h2><p>Professional wedding and event memories.</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Wedding">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Wedding event">
+<img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80" alt="Couple">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Wedding photography">
+<img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=80" alt="Bride">
+<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Event">
+</div></div></section>
+
+<section id="booking" class="page"><div class="container">
+<div class="section-head"><div class="kicker">Easy Online Booking</div><h2>Event Booking Form</h2><p>Select quantity 1–5 for every service. Price = quantity × unit price.</p></div>
+<div class="form-wrap">
+<div class="customer-grid">
+<div class="field"><label>Customer Name *</label><input id="customerName" type="text" placeholder="Customer name"></div>
+<div class="field"><label>Mobile Number *</label><input id="customerMobile" type="tel" placeholder="03XXXXXXXXX"></div>
+<div class="field"><label>WhatsApp Number</label><input id="customerWhatsapp" type="tel" placeholder="03XXXXXXXXX"></div>
+<div class="field"><label>Event Venue</label><input id="venue" type="text" placeholder="Venue name"></div>
+<div class="field full"><label>Complete Address</label><input id="address" type="text" placeholder="Complete address"></div>
+<div class="field full"><label>Additional Notes</label><textarea id="notes" placeholder="Any additional requirements..."></textarea></div>
 </div>
-</section>
-
-<section id="booking">
-<div class="container">
-  <div class="section-head"><div class="kicker">Easy Online Booking</div><h2>Event Booking Form</h2><p>Choose the date, day/night and coverage for each event. Every event calculates separately.</p></div>
-  <div class="form-wrap">
-    <div class="customer-grid">
-      <div class="field"><label>Customer Name *</label><input id="customerName" type="text" placeholder="Customer name"></div>
-      <div class="field"><label>Mobile Number *</label><input id="customerMobile" type="tel" placeholder="03XXXXXXXXX"></div>
-      <div class="field"><label>WhatsApp Number</label><input id="customerWhatsapp" type="tel" placeholder="03XXXXXXXXX"></div>
-      <div class="field"><label>Event Venue</label><input id="venue" type="text" placeholder="Venue name"></div>
-      <div class="field full"><label>Complete Address</label><input id="address" type="text" placeholder="Complete address"></div>
-      <div class="field full"><label>Additional Notes</label><textarea id="notes" placeholder="Any additional requirements..."></textarea></div>
-    </div>
-
-    <div class="events" id="events"></div>
-
-    <div class="summary">
-      <h3>Payment Summary</h3>
-      <div class="summary-grid">
-        <div class="summary-row"><span>Subtotal</span><strong id="subtotal">0 PKR</strong></div>
-        <div class="summary-row"><span>Discount</span><input id="discount" type="number" min="0" value="0" oninput="calculateAll()"></div>
-        <div class="summary-row total"><span>Grand Total</span><strong id="grandTotal">0 PKR</strong></div>
-        <div class="summary-row"><span>Advance Payment</span><input id="advance" type="number" min="0" value="0" oninput="calculateAll()"></div>
-        <div class="summary-row total"><span>Remaining Balance</span><strong id="remaining">0 PKR</strong></div>
-      </div>
-      <div class="action-row">
-        <button class="btn btn-gold" onclick="generateBooking()">Generate Booking</button>
-        <button class="btn btn-outline" onclick="printInvoice()">Print Booking</button>
-        <button class="btn btn-outline" onclick="printInvoice()">Download PDF</button>
-        <button class="btn btn-outline" onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
-        <button class="btn btn-dark" onclick="clearForm()">Clear Form</button>
-      </div>
-      <div class="notice">Download PDF uses your browser's A4 print dialog. Select “Save as PDF” to create the PDF.</div>
-    </div>
-  </div>
-  <div id="bookingSummary"></div>
+<div class="events" id="events"></div>
+<div class="summary">
+<h3>Payment Summary</h3><div class="summary-grid">
+<div class="summary-row"><span>Subtotal</span><strong id="subtotal">0 PKR</strong></div>
+<div class="summary-row"><span>Discount</span><input id="discount" type="number" min="0" value="0" oninput="calculateAll()"></div>
+<div class="summary-row total"><span>Grand Total</span><strong id="grandTotal">0 PKR</strong></div>
+<div class="summary-row"><span>Advance Payment</span><input id="advance" type="number" min="0" value="0" oninput="calculateAll()"></div>
+<div class="summary-row total"><span>Remaining Balance</span><strong id="remaining">0 PKR</strong></div>
 </div>
-</section>
-
-<section id="contact">
-<div class="container">
-  <div class="section-head"><div class="kicker">Get In Touch</div><h2>Contact Hadi Photo Studio</h2><p>Call or WhatsApp us for bookings and event coverage.</p></div>
-  <div class="contact-grid">
-    <div class="contact-box">
-      <h3>Studio Information</h3>
-      <p><strong>Owner:</strong> Malik Shahzad Mehmood</p>
-      <p><strong>Mobile:</strong> <a class="gold" href="tel:0305830490">0305830490</a></p>
-      <p><strong>WhatsApp:</strong> <a class="gold" href="https://wa.me/923058304908" target="_blank">03058304908</a></p>
-      <div class="btns" style="justify-content:flex-start;margin-top:18px">
-        <a class="btn btn-gold" href="tel:0305830490">☎ Call Now</a>
-        <a class="btn btn-dark" href="https://wa.me/923058304908" target="_blank">WhatsApp</a>
-      </div>
-    </div>
-    <div>
-      <iframe class="map" src="https://www.google.com/maps?q=Pakistan&output=embed" loading="lazy"></iframe>
-    </div>
-  </div>
+<div class="action-row">
+<button class="btn btn-gold" onclick="generateBooking()">Generate Booking</button>
+<button class="btn btn-outline" onclick="printInvoice()">Print Booking</button>
+<button class="btn btn-outline" onclick="downloadPDF()">Download PDF</button>
+<button class="btn btn-outline" onclick="sendWhatsApp()">Send Booking on WhatsApp</button>
+<button class="btn btn-dark" onclick="clearForm()">Clear Form</button>
 </div>
-</section>
+<div class="notice">Download PDF opens the browser/Android print dialog. Choose “Save as PDF”.</div>
+</div></div><div id="bookingSummary"></div>
+</div></section>
+
+<section id="contact" class="page"><div class="container">
+<div class="section-head"><div class="kicker">Get In Touch</div><h2>Contact HADI PHOTO STUDIO</h2><p>Call or WhatsApp for bookings and event coverage.</p></div>
+<div style="max-width:700px;margin:auto;padding:28px;border:1px solid var(--line);border-radius:15px">
+<h3>Studio Information</h3><p><strong>Owner:</strong> Malik Shahzad Mehmood</p><p><strong>Mobile:</strong> <a class="gold" href="tel:03058304908">0305 8304908</a></p><p><strong>WhatsApp:</strong> <a class="gold" href="https://wa.me/923058304908" target="_blank">0305 8304908</a></p>
+<div class="btns" style="justify-content:flex-start;margin-top:18px"><a class="btn btn-gold" href="tel:03058304908">☎ Call Now</a><a class="btn btn-dark" href="https://wa.me/923058304908" target="_blank">WhatsApp</a></div>
+</div></div></section>
 </main>
 
 <a class="float-wa" href="https://wa.me/923058304908?text=Hello%20Hadi%20Photo%20Studio%2C%20I%20want%20to%20book%20an%20event." target="_blank" aria-label="WhatsApp">☏</a>
 <div id="toast" class="toast"></div>
-
-<footer><div class="container">© 2026 <span class="footer-gold">Hadi Photo Studio</span> · Owner: Malik Shahzad Mehmood · Professional Wedding Photography & Videography</div></footer>
+<footer><div class="container">© 2026 <span class="footer-gold">HADI PHOTO STUDIO</span> · Owner: Malik Shahzad Mehmood · Professional Wedding Photography & Videography</div></footer>
 
 <script>
+const SERVICES=[
+{name:"Wedding Photography",price:10000,unit:"day",icon:"📷",desc:"Professional picture coverage for your special day."},
+{name:"Wedding Videography",price:15000,unit:"camera / day",icon:"🎥",desc:"Cinematic event video coverage with professional cameras."},
+{name:"Drone Coverage",price:10000,unit:"day",icon:"🚁",desc:"Aerial views for grand entrances, venues and celebrations."},
+{name:"Female Photographer",price:10000,unit:"day",icon:"📷",desc:"Professional female photography coverage when requested."},
+{name:"Birthday Video",price:10000,unit:"",icon:"🎂",desc:"Beautiful video memories for birthdays and family events."},
+{name:"Birthday Pictures",price:10000,unit:"",icon:"📸",desc:"High-quality birthday photography coverage."},
+{name:"Outdoor Video",price:10000,unit:"day",icon:"🎥",desc:"Creative outdoor video coverage for portraits and events."},
+{name:"Outdoor Pictures",price:10000,unit:"day",icon:"📸",desc:"Professional outdoor photography sessions."},
+{name:"SSD 128GB",price:15000,unit:"each",icon:"💾",desc:"1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000"},
+{name:"Indian Album",price:12000,unit:"each",icon:"📕",desc:"1 Album = 12,000 | 2 Album = 24,000"}
+];
 const EVENT_NAMES=["Mayoon","Nikkah","Mehndi","Barat","Walima"];
-const PRICES={video:15000,picture:10000,drone:10000,female:10000};
-
-function money(n){return new Intl.NumberFormat('en-PK').format(Math.max(0,Number(n)||0))+" PKR";}
+const money=n=>new Intl.NumberFormat("en-PK").format(Math.max(0,Number(n)||0))+" PKR";
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function showPage(page){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("active",a.dataset.page===page));
+document.querySelector("nav").classList.remove("open");
+window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderServices(){
+document.getElementById("serviceCards").innerHTML=SERVICES.map(s=>`<div class="card"><div class="icon">${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">${money(s.price)} <small>/ ${s.unit}</small></div></div>`).join("");
+}
+function qtyOptions(serviceIndex){
+const max=serviceIndex===8?3:serviceIndex===9?2:5;
+return `<option value="0">0 - Not Selected</option>${Array.from({length:max},(_,i)=>i+1).map(n=>`<option value="${n}">${n}</option>`).join("")}`;
+}">${n}</option>`).join("")}`}
 function makeEvents(){
-  const wrap=document.getElementById('events');
-  wrap.innerHTML=EVENT_NAMES.map((name,i)=>`
-    <div class="event-card" data-event="${name}">
-      <div class="event-head"><h3>${name}</h3><div class="event-total" id="eventTotal${i}">0 PKR</div></div>
-      <div class="event-body">
-        <div class="event-grid">
-          <div class="field"><label>Event Name</label><input value="${name}" readonly></div>
-          <div class="field"><label>Event Date</label><input class="event-date" type="date"></div>
-          <div class="field"><label>Day / Night</label><select class="daynight"><option value="">Select</option><option>Day</option><option>Night</option></select></div>
-          <div class="field"><label>Video Camera</label><select class="video" onchange="calculateAll()"><option value="0">0 Camera</option><option value="1">1 Camera</option><option value="2">2 Cameras</option><option value="3">3 Cameras</option></select></div>
-          <div class="field"><label>Picture Camera</label><select class="picture" onchange="calculateAll()"><option value="0">0 Camera</option><option value="1">1 Camera</option><option value="2">2 Cameras</option><option value="3">3 Cameras</option></select></div>
-          <div class="field"><label>Drone</label><select class="drone" onchange="calculateAll()"><option value="0">No</option><option value="1">1 Drone</option></select></div>
-          <div class="field"><label>Female Photographer</label><select class="female" onchange="calculateAll()"><option value="0">No</option><option value="1">1 Female Photographer</option></select></div>
-        </div>
-        <div class="event-subtotal">Event Subtotal: <span id="sub${i}">0 PKR</span></div>
-      </div>
-    </div>`).join('');
+document.getElementById("events").innerHTML=EVENT_NAMES.map((name,i)=>`
+<div class="event-card" data-event="${name}">
+<div class="event-head"><h3>${name}</h3><div class="event-total" id="eventTotal${i}">0 PKR</div></div>
+<div class="event-body">
+<div class="customer-grid" style="margin-bottom:14px">
+<div class="field"><label>Event Date</label><input class="event-date" type="date"></div>
+<div class="field"><label>Day / Night</label><select class="daynight"><option value="">Select</option><option>Day</option><option>Night</option></select></div>
+</div>
+<div class="service-grid">${SERVICES.map((s,j)=>`
+<div class="service-row">
+<div><strong>${s.name}</strong><small>${money(s.price)} / ${s.unit}</small></div>
+<div class="field"><label>Quantity</label><select class="service-qty" data-service="${j}" onchange="calculateAll()">${qtyOptions(j)}</select></div>
+<div class="service-price" id="ep_${i}_${j}">0 PKR</div>
+</div>`).join("")}</div>
+<div class="event-subtotal">Event Subtotal: <span id="sub${i}">0 PKR</span></div>
+</div></div>`).join("");
 }
 function getEventData(){
- return [...document.querySelectorAll('.event-card')].map((card,i)=>{
-   const video=+card.querySelector('.video').value,picture=+card.querySelector('.picture').value,
-         drone=+card.querySelector('.drone').value,female=+card.querySelector('.female').value;
-   const amount=video*PRICES.video+picture*PRICES.picture+drone*PRICES.drone+female*PRICES.female;
-   return {name:EVENT_NAMES[i],date:card.querySelector('.event-date').value,daynight:card.querySelector('.daynight').value,video,picture,drone,female,amount};
- });
+return [...document.querySelectorAll(".event-card")].map((card,i)=>{
+const quantities=[...card.querySelectorAll(".service-qty")].map(x=>+x.value||0);
+const items=quantities.map((q,j)=>({name:SERVICES[j].name,qty:q,unit:SERVICES[j].price,amount:q*SERVICES[j].price})).filter(x=>x.qty);
+const amount=items.reduce((s,x)=>s+x.amount,0);
+return {name:EVENT_NAMES[i],date:card.querySelector(".event-date").value,daynight:card.querySelector(".daynight").value,quantities,items,amount};
+});
 }
 function calculateAll(){
- let total=0;
- getEventData().forEach((e,i)=>{total+=e.amount;document.getElementById('sub'+i).textContent=money(e.amount);document.getElementById('eventTotal'+i).textContent=money(e.amount);});
- const discount=+document.getElementById('discount').value||0, advance=+document.getElementById('advance').value||0;
- const grand=Math.max(0,total-discount), remain=Math.max(0,grand-advance);
- document.getElementById('subtotal').textContent=money(total);
- document.getElementById('grandTotal').textContent=money(grand);
- document.getElementById('remaining').textContent=money(remain);
+let total=0;
+getEventData().forEach((e,i)=>{total+=e.amount;document.getElementById("sub"+i).textContent=money(e.amount);document.getElementById("eventTotal"+i).textContent=money(e.amount);e.quantities.forEach((q,j)=>{document.getElementById(`ep_${i}_${j}`).textContent=money(q*SERVICES[j].price)})});
+const discount=+document.getElementById("discount").value||0,advance=+document.getElementById("advance").value||0;
+const grand=Math.max(0,total-discount),remain=Math.max(0,grand-advance);
+document.getElementById("subtotal").textContent=money(total);document.getElementById("grandTotal").textContent=money(grand);document.getElementById("remaining").textContent=money(remain);
 }
-function bookingNo(){return 'HPS-'+new Date().getFullYear()+'-'+String(Date.now()).slice(-6);}
-function bookingDate(){return new Date().toLocaleDateString('en-PK',{day:'2-digit',month:'short',year:'numeric'});}
+function bookingNo(){return "HPS-"+new Date().getFullYear()+"-"+String(Date.now()).slice(-6)}
+function bookingDate(){return new Date().toLocaleDateString("en-PK",{day:"2-digit",month:"short",year:"numeric"})}
 function buildInvoice(){
- const events=getEventData(), active=events.filter(e=>e.date||e.video||e.picture||e.drone||e.female||e.daynight);
- const name=document.getElementById('customerName').value||'—',mobile=document.getElementById('customerMobile').value||'—',
- whatsapp=document.getElementById('customerWhatsapp').value||'—',venue=document.getElementById('venue').value||'—',
- address=document.getElementById('address').value||'—',notes=document.getElementById('notes').value||'';
- const subtotal=events.reduce((s,e)=>s+e.amount,0),discount=+document.getElementById('discount').value||0,grand=Math.max(0,subtotal-discount),advance=+document.getElementById('advance').value||0,remain=Math.max(0,grand-advance);
- const rows=(active.length?active:events).map(e=>`<tr><td>${e.name}</td><td>${e.date||'—'}</td><td>${e.daynight||'—'}</td><td>${e.video}</td><td>${e.picture}</td><td>${e.drone?'1':'0'}</td><td>${e.female?'1':'0'}</td><td>${money(e.amount)}</td></tr>`).join('');
- return `<div class="invoice">
-  <div class="invoice-top"><div><div class="invoice-logo">Hadi <span>Photo Studio</span></div><div>Professional Wedding Photography & Videography</div><div>Owner: Malik Shahzad Mehmood</div></div>
-  <div class="invoice-meta"><strong>INVOICE / BOOKING</strong><br>No: ${bookingNo()}<br>Booking Date: ${bookingDate()}<br>Mobile: 0305830490<br>WhatsApp: 03058304908</div></div>
-  <h3>Customer Information</h3>
-  <div class="invoice-customer"><div><b>Name:</b> ${escapeHtml(name)}</div><div><b>Mobile:</b> ${escapeHtml(mobile)}</div><div><b>WhatsApp:</b> ${escapeHtml(whatsapp)}</div><div><b>Venue:</b> ${escapeHtml(venue)}</div><div style="grid-column:1/-1"><b>Address:</b> ${escapeHtml(address)}</div></div>
-  <h3>Event Details</h3>
-  <div style="overflow-x:auto"><table><thead><tr><th>Event</th><th>Event Date</th><th>Day/Night</th><th>Video</th><th>Picture</th><th>Drone</th><th>Female</th><th>Event Amount</th></tr></thead><tbody>${rows}</tbody></table></div>
-  <div class="payment-box"><div><span>Subtotal</span><b>${money(subtotal)}</b></div><div><span>Discount</span><b>${money(discount)}</b></div><div class="grand"><span>TOTAL AMOUNT</span><b>${money(grand)}</b></div><div><span>ADVANCE PAID</span><b>${money(advance)}</b></div><div class="balance"><span>BALANCE REMAINING</span><b>${money(remain)}</b></div></div>
-  ${notes?`<h3>Additional Notes</h3><div style="padding:12px;background:#faf9f5;border:1px solid #eee">${escapeHtml(notes)}</div>`:''}
-  <div class="invoice-footer">Thank you for choosing Hadi Photo Studio.<br>Booking confirmation will be subject to advance payment.<br><strong>Hadi Photo Studio · Owner: Malik Shahzad Mehmood · Mobile: 0305830490 · WhatsApp: 03058304908</strong></div>
- </div>`;
+const events=getEventData(),active=events.filter(e=>e.date||e.daynight||e.amount);
+const name=document.getElementById("customerName").value||"—",mobile=document.getElementById("customerMobile").value||"—",whatsapp=document.getElementById("customerWhatsapp").value||"—",venue=document.getElementById("venue").value||"—",address=document.getElementById("address").value||"—",notes=document.getElementById("notes").value||"";
+const subtotal=events.reduce((s,e)=>s+e.amount,0),discount=+document.getElementById("discount").value||0,grand=Math.max(0,subtotal-discount),advance=+document.getElementById("advance").value||0,remain=Math.max(0,grand-advance);
+const rows=(active.length?active:events).map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.date||"—")}</td><td>${esc(e.daynight||"—")}</td><td>${e.items.length?e.items.map(x=>`${esc(x.name)} × ${x.qty} = ${money(x.amount)}`).join("<br>"):"—"}</td><td>${money(e.amount)}</td></tr>`).join("");
+return `<div class="invoice"><div class="invoice-top"><div><div class="invoice-logo">HADI <span>PHOTO STUDIO</span></div><div>WEDDING PHOTOGRAPHY & VIDEOGRAPHY</div><div>Owner: Malik Shahzad Mehmood</div></div><div class="invoice-meta"><strong>INVOICE / BOOKING</strong><br>No: ${bookingNo()}<br>Booking Date: ${bookingDate()}<br>Mobile: 0305 8304908<br>WhatsApp: 0305 8304908</div></div>
+<h3>Customer Information</h3><div class="invoice-customer"><div><b>Name:</b> ${esc(name)}</div><div><b>Mobile:</b> ${esc(mobile)}</div><div><b>WhatsApp:</b> ${esc(whatsapp)}</div><div><b>Venue:</b> ${esc(venue)}</div><div style="grid-column:1/-1"><b>Address:</b> ${esc(address)}</div></div>
+<h3>Event Details</h3><div style="overflow-x:auto"><table><thead><tr><th>Event</th><th>Date</th><th>Day/Night</th><th>Services & Quantity</th><th>Event Amount</th></tr></thead><tbody>${rows}</tbody></table></div>
+<div class="payment-box"><div><span>Subtotal</span><b>${money(subtotal)}</b></div><div><span>Discount</span><b>${money(discount)}</b></div><div class="grand"><span>TOTAL AMOUNT</span><b>${money(grand)}</b></div><div><span>ADVANCE PAID</span><b>${money(advance)}</b></div><div class="balance"><span>BALANCE REMAINING</span><b>${money(remain)}</b></div></div>
+${notes?`<h3>Additional Notes</h3><div style="padding:12px;background:#faf9f5;border:1px solid #eee">${esc(notes)}</div>`:""}
+<div class="invoice-footer">Thank you for choosing HADI PHOTO STUDIO.<br>Booking confirmation will be subject to advance payment.<br><strong>HADI PHOTO STUDIO · Owner: Malik Shahzad Mehmood · 0305 8304908 / 0312 8304908</strong></div></div>`;
 }
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-function generateBooking(){document.getElementById('bookingSummary').innerHTML=buildInvoice();document.getElementById('bookingSummary').style.display='block';document.getElementById('bookingSummary').scrollIntoView({behavior:'smooth',block:'start'});toast('Booking summary generated');}
-function printInvoice(){if(!document.getElementById('bookingSummary').innerHTML) generateBooking();setTimeout(()=>window.print(),250);}
+function generateBooking(){document.getElementById("bookingSummary").innerHTML=buildInvoice();document.getElementById("bookingSummary").style.display="block";document.getElementById("bookingSummary").scrollIntoView({behavior:"smooth",block:"start"});toast("Booking summary generated")}
+function printInvoice(){if(!document.getElementById("bookingSummary").innerHTML)generateBooking();setTimeout(()=>window.print(),250)}
+function downloadPDF(){printInvoice()}
 function whatsappText(){
- const events=getEventData(), subtotal=events.reduce((s,e)=>s+e.amount,0),discount=+document.getElementById('discount').value||0,grand=Math.max(0,subtotal-discount),advance=+document.getElementById('advance').value||0,remain=Math.max(0,grand-advance);
- let t=`*HADI PHOTO STUDIO - BOOKING*%0AOwner: Malik Shahzad Mehmood%0A%0A*Customer:* ${encodeURIComponent(document.getElementById('customerName').value||'—')}%0AMobile: ${encodeURIComponent(document.getElementById('customerMobile').value||'—')}%0AWhatsApp: ${encodeURIComponent(document.getElementById('customerWhatsapp').value||'—')}%0AVenue: ${encodeURIComponent(document.getElementById('venue').value||'—')}%0A%0A*EVENT DETAILS*%0A`;
- events.forEach(e=>{if(e.date||e.video||e.picture||e.drone||e.female||e.daynight)t+=`%0A${e.name}: ${encodeURIComponent(e.date||'—')} | ${encodeURIComponent(e.daynight||'—')} | Video ${e.video} | Picture ${e.picture} | Drone ${e.drone} | Female ${e.female} | ${encodeURIComponent(money(e.amount))}`});
- t+=`%0A%0ASubtotal: ${encodeURIComponent(money(subtotal))}%0ADiscount: ${encodeURIComponent(money(discount))}%0A*TOTAL AMOUNT: ${encodeURIComponent(money(grand))}*%0AAdvance Paid: ${encodeURIComponent(money(advance))}%0A*Balance Remaining: ${encodeURIComponent(money(remain))}*`;
- return t;
+const events=getEventData(),subtotal=events.reduce((s,e)=>s+e.amount,0),discount=+document.getElementById("discount").value||0,grand=Math.max(0,subtotal-discount),advance=+document.getElementById("advance").value||0,remain=Math.max(0,grand-advance);
+let t=`*HADI PHOTO STUDIO - BOOKING*%0AOwner: Malik Shahzad Mehmood%0A%0A*Customer:* ${encodeURIComponent(document.getElementById("customerName").value||"—")}%0AMobile: ${encodeURIComponent(document.getElementById("customerMobile").value||"—")}%0AVenue: ${encodeURIComponent(document.getElementById("venue").value||"—")}%0A%0A*EVENT DETAILS*%0A`;
+events.forEach(e=>{if(e.date||e.daynight||e.amount)t+=`%0A*${e.name}* | ${encodeURIComponent(e.date||"—")} | ${encodeURIComponent(e.daynight||"—")}%0A${encodeURIComponent(e.items.map(x=>`${x.name} x ${x.qty} = ${money(x.amount)}`).join(" | "))}%0AEvent Total: ${encodeURIComponent(money(e.amount))}`});
+t+=`%0A%0ASubtotal: ${encodeURIComponent(money(subtotal))}%0ADiscount: ${encodeURIComponent(money(discount))}%0A*TOTAL: ${encodeURIComponent(money(grand))}*%0AAdvance: ${encodeURIComponent(money(advance))}%0A*Balance: ${encodeURIComponent(money(remain))}*`;
+return t;
 }
-function sendWhatsApp(){window.open('https://wa.me/923058304908?text='+whatsappText(),'_blank');}
-function clearForm(){if(!confirm('Clear the complete booking form?'))return;document.querySelectorAll('input:not([readonly]), textarea').forEach(x=>{if(x.type==='number')x.value=0;else x.value=''});document.querySelectorAll('select').forEach(x=>x.selectedIndex=0);document.getElementById('bookingSummary').innerHTML='';document.getElementById('bookingSummary').style.display='none';calculateAll();}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
-makeEvents();calculateAll();
-</script>
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
-}
-  Mere "Hadi Photo Studio" website ke "Professional Services" section mein 2 naye cards add karo.
-
-1.  Card 1: Title = "SSD 128GB", Price = "15,000 PKR", Description = "1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000". Icon camera wala rakho.
-2.  Card 2: Title = "Indian Album", Price = "12,000 PKR", Description = "1 Album = 12,000 | 2 Album = 24,000". Icon album wala rakho.
-
-Baqi cards as it is rehne do. Design same rakho. 
-Aur "Book Your Event" button par click karne se hi "Event Booking Form" khule. Home page par form direct na dikhe.
+function sendWhatsApp(){window.open("https://wa.me/923058304908?text="+whatsappText(),"_blank")}
+function clearForm(){if(!confirm("Clear the complete booking form?"))return;document.querySelectorAll("input:not([readonly]),textarea").forEach(x=>{if(x.type==="number")x.value=0;else x.value=""});document.querySelectorAll("select").forEach(x=>x.selectedIndex=0);document.getElementById("bookingSummary").innerHTML="";document.getElementById("bookingSummary").style.display="none";calculateAll()}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200)}
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&["u","s","p"].includes(e.key.toLowerCase()))e.preventDefault()});
+renderServices();makeEvents();calculateAll();
+setTimeout(()=>document.getElementById("splash").classList.add("hide"),2000);
 </script>
 </body>
 </html>
-Website ko Single Page App banao. 
-Home par sirf Logo, Banner aur Gallery dikhe. 
-"Services" aur "Booking Form" chupe rahen. 
-Jab menu se "Services" click ho to sirf services dikhen. 
-Jab "Booking" click ho to sirf form dikhe.
-Booking Form mein har service ke liye "Quantity" ka option add karo. 
-Jaise user 2 select kare to price * 2 ho jaye. 
-SSD aur Indian Album ko bhi is list mein add karo with above prices.
-Subtotal, Grand Total auto calculate ho.
-Bhai, meri "Hadi Photo Studio" ki website ko update karo. Ye rahi meri requirements:
-
-1.  SERVICES SECTION UPDATE:
-    "Professional Services" mein ye 2 naye cards add karo:
-    Card 1: 
-    - Title: SSD 128GB
-    - Price: 15,000 PKR
-    - Description: 1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000
-    - Icon: Hard disk wala
-    
-    Card 2: 
-    - Title: Indian Album
-    - Price: 12,000 PKR  
-    - Description: 1 Album = 12,000 | 2 Album = 24,000
-    - Icon: Album wala
-
-2.  BOOKING FORM UPDATE:
-    "Event Booking Form" mein bhi ye 2 services add karo with quantity option.
-    Har service ke liye "Quantity" ka dropdown 1,2,3,4,5 ho.
-    Price auto calculate ho: Quantity * Price
-    Subtotal, Discount, Grand Total, Advance Payment, Remaining Balance sab auto calculate hon.
-
-3.  PAGE NAVIGATION FIX:
-    Website ko single page banao.
-    Home page par sirf Banner + Gallery dikhe.
-    "Services" aur "Booking Form" tab par click karne se hi show hon.
-    Direct home par booking form na dikhe.
-
-4.  BUTTONS:
-    "Generate Booking", "Print Booking", "Download PDF", "Send Booking on WhatsApp" button kaam karne chahiye.
-    PDF download client ke liye bhi ON rakhna.
-
-Mujhe updated mukammal HTML, CSS, JS code de do. Design black and golden theme ka hi rakhna.
-Update my "HADI PHOTO STUDIO" website and app with these changes:
-
-1.  SERVICES & PRICING UPDATE:
-    In "Professional Services" section, add/update these cards with exact prices:
-    - Wedding Photography: 15,000 PKR per day
-    - Wedding Videography: 15,000 PKR per day  
-    - Birthday Video: 15,000 PKR per day
-    - Birthday Pictures: 10,000 PKR per day
-    - Female Photographer: 10,000 PKR per day
-    - Drone Coverage: 10,000 PKR per day
-    - SSD 128GB: 15,000 PKR each. Note: 1 SSD = 15,000 | 2 SSD = 30,000 | 3 SSD = 45,000
-    - Indian Album: 12,000 PKR each. Note: 1 Album = 12,000 | 2 Album = 24,000
-    - Bridal Shower: 15,000 PKR per day
-    - Outdoor Coverage: 15,000 PKR per day
-    
-    Use camera, video, album, drone icons. Keep design black and golden theme.
-
-2.  BOOKING FORM & CALCULATION:
-    In "Event Booking Form", add all above services with "Quantity" dropdown 1-5.
-    Price should auto-calculate: Quantity x Price per day.
-    Show Subtotal, Discount, Grand Total, Advance Payment, Remaining Balance. All should update live.
-
-3.  PAGE NAVIGATION:
-    Make it a single page website.
-    On Home: Only show Banner + Featured Gallery.
-    "Services" and "Booking" should only show when clicked from top menu.
-    Do not show Booking Form directly on home page.
-
-4.  IMPORTANT FEATURES:
-    - Enable "Download PDF" and "Print" for Client accounts also, not just Admin.
-    - "Generate Booking", "Print Booking", "Download PDF", "Send Booking on WhatsApp" buttons must work.
-    - Keep "Right Click and Screenshot Block" on Generate Invoice page.
-    - Use this logo: HADI PHOTO STUDIO - WEDDING PHOTOGRAPHY & VIDEOGRAPHY. Dark blue background, golden text.
-    - Splash screen 2 seconds with studio name and contact: 0305 8304908 / 0312 8304908
-    - No watermark.
-
-Give me complete updated HTML, CSS, JS code. Also generate APK with WebView.
